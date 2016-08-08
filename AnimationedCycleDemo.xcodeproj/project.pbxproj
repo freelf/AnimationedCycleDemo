@@ -15,6 +15,7 @@
 		2D5E63C21D5893B200ED747A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5E63C01D5893B200ED747A /* LaunchScreen.storyboard */; };
 		2D5E63CD1D5893B200ED747A /* AnimationedCycleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E63CC1D5893B200ED747A /* AnimationedCycleDemoTests.m */; };
 		2D5E63D81D5893B200ED747A /* AnimationedCycleDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E63D71D5893B200ED747A /* AnimationedCycleDemoUITests.m */; };
+		2D5E63E71D58961400ED747A /* CircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E63E61D58961400ED747A /* CircleLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		2D5E63D31D5893B200ED747A /* AnimationedCycleDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationedCycleDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5E63D71D5893B200ED747A /* AnimationedCycleDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationedCycleDemoUITests.m; sourceTree = "<group>"; };
 		2D5E63D91D5893B200ED747A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D5E63E51D58961400ED747A /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayer.h; sourceTree = "<group>"; };
+		2D5E63E61D58961400ED747A /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				2D5E63B81D5893B200ED747A /* ViewController.h */,
 				2D5E63B91D5893B200ED747A /* ViewController.m */,
 				2D5E63BB1D5893B200ED747A /* Main.storyboard */,
+				2D5E63E51D58961400ED747A /* CircleLayer.h */,
+				2D5E63E61D58961400ED747A /* CircleLayer.m */,
 				2D5E63BE1D5893B200ED747A /* Assets.xcassets */,
 				2D5E63C01D5893B200ED747A /* LaunchScreen.storyboard */,
 				2D5E63C31D5893B200ED747A /* Info.plist */,
@@ -273,6 +278,7 @@
 				2D5E63BA1D5893B200ED747A /* ViewController.m in Sources */,
 				2D5E63B71D5893B200ED747A /* AppDelegate.m in Sources */,
 				2D5E63B41D5893B200ED747A /* main.m in Sources */,
+				2D5E63E71D58961400ED747A /* CircleLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

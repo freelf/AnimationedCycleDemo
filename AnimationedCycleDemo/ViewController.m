@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UISlider *mySlider;
+@property (weak, nonatomic) IBOutlet UILabel *currentValueLabel;
 
 @end
 
@@ -16,12 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   [self.mySlider addTarget:self action:@selector(valuechanged:) forControlEvents:UIControlEventValueChanged];
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)valuechanged:(UISlider *)sender
+{
+    self.currentValueLabel.text = [NSString stringWithFormat:@"currentValue:%f",sender.value];
 }
 
 @end

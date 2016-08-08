@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nK8-yY-Okg">
+                                <rect key="frame" x="241" y="480" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="efx-tV-py1"/>
+                                    <constraint firstAttribute="height" constant="30" id="feK-w4-rRf"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eok-Jq-HZm">
+                                <rect key="frame" x="232" y="484" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEA-h2-1mY">
+                                <rect key="frame" x="357" y="484" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentValue:0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEs-Qc-Nxx">
+                                <rect key="frame" x="237" y="432" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nK8-yY-Okg" firstAttribute="top" secondItem="VEs-Qc-Nxx" secondAttribute="bottom" constant="27" id="2My-dO-kQI"/>
+                            <constraint firstItem="VEs-Qc-Nxx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4yN-JR-Gcb"/>
+                            <constraint firstItem="nK8-yY-Okg" firstAttribute="centerY" secondItem="Eok-Jq-HZm" secondAttribute="centerY" id="6CC-S2-nOy"/>
+                            <constraint firstItem="nK8-yY-Okg" firstAttribute="leading" secondItem="Eok-Jq-HZm" secondAttribute="trailing" id="Ayb-cs-6g4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nK8-yY-Okg" secondAttribute="bottom" constant="90" id="Mpc-Ln-EZj"/>
+                            <constraint firstItem="nK8-yY-Okg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NdH-rl-bcC"/>
+                            <constraint firstItem="VEA-h2-1mY" firstAttribute="leading" secondItem="nK8-yY-Okg" secondAttribute="trailing" id="TaJ-mB-dHh"/>
+                            <constraint firstItem="VEA-h2-1mY" firstAttribute="centerY" secondItem="nK8-yY-Okg" secondAttribute="centerY" id="V4K-j5-g7T"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentValueLabel" destination="VEs-Qc-Nxx" id="o5R-2z-d2j"/>
+                        <outlet property="mySlider" destination="nK8-yY-Okg" id="nnP-6M-TLy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
